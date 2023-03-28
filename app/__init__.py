@@ -1,6 +1,7 @@
 import os
 from flask import Flask
 from app import db
+from app.resources import mail
 
 def create_app():
     app = Flask(__name__)
@@ -16,4 +17,6 @@ def create_app():
 
     db.init_app(app)
     
+    app.register_blueprint(mail.bp)
+
     return app
