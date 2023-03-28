@@ -20,7 +20,10 @@
                 <input type="text" name="search" id="search" placeholder="Wanna look something up?">
             </form>
         </div>
-        
+        <header>{% block header %}{% endblock %}</header>
+        {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
         {% block content %}{% endblock %}
     </section>
 </body>
