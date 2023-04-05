@@ -19,6 +19,7 @@
             <form action="" method="get">
                 <input type="text" name="search" id="search" placeholder="Wanna look something up?">
             </form>
+            {% block action %}{% endblock %}
         </div>
         <header>{% block header %}{% endblock %}</header>
         {% for message in get_flashed_messages() %}
