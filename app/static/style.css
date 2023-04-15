@@ -1,0 +1,87 @@
+*, *::before, *:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.side-bar {
+    background-color: #fff;
+    box-shadow: 0 1px 2px #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    padding: 30px 30px 0 30px;
+}
+
+.content {
+    margin: 30px 20px 0 170px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+form input {
+    font-family: 'Raleway', sans-serif;
+    border: 0;
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    box-shadow: 0 1px 5px #ddd;
+    outline: none;
+    width: 450px;
+    display: block;
+}
+
+header {
+    padding: 20px 0;
+}
+
+.mail {
+    background-color: #fff;
+    list-style-type: none;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    box-shadow: 0 1px 5px #ddd;
+    border-radius: 5px;
+}
+
+.mail-content {
+    margin: 5px 0 0 0;
+    color: #aaa;
+}
+
+.email {
+    color: #674dd4;
+}
+
+.button {
+    font-size: 14px;
+    transition: background-color 0.5s ease;
+    background-color: #674dd4;
+    color: #fff;
+    align-self: center;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #7b62e3;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 5px 0 0 0;
+}
