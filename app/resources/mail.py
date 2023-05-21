@@ -7,3 +7,7 @@ bp = Blueprint('mail', __name__)
 def index():
     mails = Mail.get_all()
     return render_template('mail/index.html', mails=mails)
+
+@bp.route('/create', methods=['POST', 'GET'])
+def create():
+    return render_template('mail/create.html')
