@@ -13,3 +13,10 @@ class Mail(object):
         db, c = get_db()
         c.execute("insert into mail (email, subject, content) values (%s, %s, %s)", (email, subject, content))
         db.commit()
+
+    @classmethod
+    def search(cls, search):
+        db, c = get_db()
+        search = '%' + search + '%'
+        c.execute("select * from mail where email like %s or content like %s or subject like %s", (search, search, search))
+        return c.fetchall()

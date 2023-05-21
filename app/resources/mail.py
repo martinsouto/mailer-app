@@ -5,7 +5,10 @@ bp = Blueprint('mail', __name__)
 
 @bp.route('/', methods=['POST', 'GET'])
 def index():
-    mails = Mail.get_all()
+    if request.args.get('search'):
+        mails = Mail.search(request.args.get('search'))
+    else:
+        mails = Mail.get_all()
     return render_template('mail/index.html', mails=mails)
 
 @bp.route('/create', methods=['POST', 'GET'])
@@ -21,7 +24,3 @@ def create():
             return redirect(url_for('mail.index'))
         
     return render_template('mail/create.html')
-
-def send(email, subject, content):
-    pass
-    #sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_KEY'])
